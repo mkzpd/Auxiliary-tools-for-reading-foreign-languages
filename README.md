@@ -1,2 +1,29 @@
 # Auxiliary-tools-for-reading-foreign-languages
 A auxiliary tools that for reading foreign languages electronic book at computer  can temp save foreign languages translate.
+
+# 应用程序介绍
+
+这是用QT和C++写的一个简单的桌面程序，当你看电子版外文资料时，遇到不确定意思的段落(或者说自己翻译不通)的时候，利用Chatgpt翻译后，手动选择翻译后的意思，然后点击这个应用程序最上面的 `粘贴并整理` 按钮，即可把文本复制到文本框中，当下次有新的内容要粘贴到这个应用程序的文本框时，直接点击 `粘贴并整理` 按钮即可，不用手动清除文本框里原来的内容，当点击 `粘贴并整理` 按钮时，它只会把你本次复制到粘贴板的内容粘贴到文本框，文本框中只会显示当前粘贴板的内容。
+
+# 本应用程序亮点
+
+Windows系统里面的话，如果把复制的内容粘贴到记事本或其他文本编辑器时，好多文本编辑器会把所有的内容粘贴到一行，这样你看外文电子资料对应的翻译时，左右拖动文本编辑器的滑块左右看时非常不方便，本应用程序很好地解决了这个问题，使粘贴的内容自动适应本应用程序中文本框的宽度，不用再左右滑动滑块，方便对照着看外文资料和翻译的意思。
+
+或许其他的文本编辑器可以根据文本框的宽度自动换行，但是或许字体太小的时候不能调节字体的大小，本应用程序可以方便地调节文本框中字体的大小，不至于长时间忍受字体过于小，眼睛感到酸痛。
+
+# 应用程序适用平台
+
+因为本应用程序是用QT开发的，QT编写的应用程序跨平台性很好，理论上WIndows，Mac，Linux上都能正常编译生成可执行程序。
+
+# 应用程序图片
+
+
+![介绍](https://github.com/mkzpd/Auxiliary-tools-for-reading-foreign-languages/blob/main/picture/Screenshot-2.png)
+
+# 使用方法
+
+![介绍](https://github.com/mkzpd/Auxiliary-tools-for-reading-foreign-languages/blob/main/picture/Screenshot-1.png)
+
+# 个人使用感受
+
+这样看外文资料，能在提高英语水平的时候还可以学到最新，最炫的知识。
