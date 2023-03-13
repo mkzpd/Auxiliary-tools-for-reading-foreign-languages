@@ -182,6 +182,7 @@ DIST          = ../../Qt/6.4.1/macos/mkspecs/features/spec_pre.prf \
 		../../Qt/6.4.1/macos/mkspecs/features/qt_config.prf \
 		../../Qt/6.4.1/macos/mkspecs/macx-clang/qmake.conf \
 		../../Qt/6.4.1/macos/mkspecs/features/spec_post.prf \
+		../ChangeFontSize/.qmake.stash \
 		../../Qt/6.4.1/macos/mkspecs/features/exclusive_builds.prf \
 		../../Qt/6.4.1/macos/mkspecs/features/mac/sdk.prf \
 		../../Qt/6.4.1/macos/mkspecs/features/toolchain.prf \
@@ -220,7 +221,7 @@ TARGET        = ChangeFontSize.app/Contents/MacOS/ChangeFontSize
 EXPORT_QMAKE_MAC_SDK = macosx
 EXPORT_QMAKE_MAC_SDK_VERSION = 13.0
 EXPORT_QMAKE_XCODE_DEVELOPER_PATH = /Applications/Xcode.app/Contents/Developer
-EXPORT__QMAKE_STASH_ = 
+EXPORT__QMAKE_STASH_ = /Users/mindgood/Documents/build-ChangeFontSize-Qt_6_4_1_for_macOS-Debug/.qmake.stash
 EXPORT_VALID_ARCHS = x86_64 arm64
 EXPORT_DEFAULT_ARCHS = x86_64
 EXPORT_ARCHS = $(filter $(EXPORT_VALID_ARCHS), $(if $(ARCHS), $(ARCHS), $(if $(EXPORT_DEFAULT_ARCHS), $(EXPORT_DEFAULT_ARCHS), $(EXPORT_VALID_ARCHS))))
@@ -361,6 +362,7 @@ Makefile: ../ChangeFontSize/ChangeFontSize.pro ../../Qt/6.4.1/macos/mkspecs/macx
 		../../Qt/6.4.1/macos/mkspecs/features/qt_config.prf \
 		../../Qt/6.4.1/macos/mkspecs/macx-clang/qmake.conf \
 		../../Qt/6.4.1/macos/mkspecs/features/spec_post.prf \
+		.qmake.stash \
 		../../Qt/6.4.1/macos/mkspecs/features/exclusive_builds.prf \
 		../../Qt/6.4.1/macos/mkspecs/features/mac/sdk.prf \
 		../../Qt/6.4.1/macos/mkspecs/features/toolchain.prf \
@@ -519,6 +521,7 @@ Makefile: ../ChangeFontSize/ChangeFontSize.pro ../../Qt/6.4.1/macos/mkspecs/macx
 ../../Qt/6.4.1/macos/mkspecs/features/qt_config.prf:
 ../../Qt/6.4.1/macos/mkspecs/macx-clang/qmake.conf:
 ../../Qt/6.4.1/macos/mkspecs/features/spec_post.prf:
+.qmake.stash:
 ../../Qt/6.4.1/macos/mkspecs/features/exclusive_builds.prf:
 ../../Qt/6.4.1/macos/mkspecs/features/mac/sdk.prf:
 ../../Qt/6.4.1/macos/mkspecs/features/toolchain.prf:
@@ -592,6 +595,7 @@ clean: compiler_clean
 
 distclean: clean 
 	-$(DEL_FILE) -r ChangeFontSize.app
+	-$(DEL_FILE) .qmake.stash
 	-$(DEL_FILE) Makefile
 
 
