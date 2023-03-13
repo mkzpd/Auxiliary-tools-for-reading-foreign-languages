@@ -80,7 +80,7 @@ void MainWindow::onButtonBClicked()
 
 void  MainWindow::onFontSizeSpinBoxValueChanged(int CurrentValue)
 {
-     // 根据调节滑块的值调节字号
+     // 根据设置的值调节字号
      QFont font = textEdit->font();
      font.setPointSize(CurrentValue);
      textEdit->setFont(font);
