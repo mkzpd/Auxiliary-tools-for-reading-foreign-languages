@@ -9,12 +9,13 @@
 MainWindow::MainWindow(QWidget *parent)
      : QMainWindow(parent)
 {
+     move(800,800);
      textEdit = new QTextEdit(this);
 
      // 设置字体
      QFont font = textEdit->font();
      font.setPointSize(CurrentValue);
-     font.setFamily("宋体");
+     //font.setFamily("宋体");
      textEdit->setFont(font);
 
      // 设置spinbox
