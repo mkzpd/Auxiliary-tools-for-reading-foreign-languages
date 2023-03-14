@@ -9,7 +9,7 @@
 MainWindow::MainWindow(QWidget *parent)
      : QMainWindow(parent)
 {
-     move(800,800);
+     move(0,80);
      textEdit = new QTextEdit(this);
 
      // 设置字体
