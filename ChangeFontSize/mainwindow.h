@@ -5,10 +5,11 @@
 #include <QTextEdit>
 #include <QSpinBox>
 #include <QPushButton>
-//#include <QBoxLayout>
+#include <QMessageBox>
+#include <QClipboard>
+#include <QApplication>
 #include <QVBoxLayout>
 #include <QHBoxLayout>
-//#include <QLayout>
 
 class MainWindow : public QMainWindow
 {
