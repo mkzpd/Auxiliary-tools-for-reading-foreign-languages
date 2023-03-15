@@ -21,12 +21,23 @@ Windows系统里面的话，如果把复制的内容粘贴到记事本或其他�
 
 # 应用程序图片
 
+## Mac平台下应用程序
 
 ![介绍](https://github.com/mkzpd/Auxiliary-tools-for-reading-foreign-languages/blob/main/picture/Screenshot-2.png)
 
+## Windows下应用程序
+
+![介绍](https://github.com/mkzpd/Auxiliary-tools-for-reading-foreign-languages/blob/main/picture/windows-picture.PNG)
+
 # 使用方法
 
+## mac平台下使用
+
 ![介绍](https://github.com/mkzpd/Auxiliary-tools-for-reading-foreign-languages/blob/main/picture/Screenshot-1.png)
+
+## Windows平台下使用
+
+![介绍](https://github.com/mkzpd/Auxiliary-tools-for-reading-foreign-languages/blob/main/picture/windows-picture-use.PNG)
 
 # 个人使用感受
 
