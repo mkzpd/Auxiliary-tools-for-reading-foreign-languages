@@ -17,7 +17,7 @@ CXX           = /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefau
 DEFINES       = -DQT_QML_DEBUG -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB
 CFLAGS        = -pipe -g $(EXPORT_ARCH_ARGS) -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk -mmacosx-version-min=10.14 -Wall -Wextra $(DEFINES)
 CXXFLAGS      = -pipe -stdlib=libc++ -g -std=gnu++1z $(EXPORT_ARCH_ARGS) -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk -mmacosx-version-min=10.14 -Wall -Wextra $(DEFINES)
-INCPATH       = -I../ChangeFontSize -I. -I../../Qt/6.4.1/macos/lib/QtWidgets.framework/Headers -I../../Qt/6.4.1/macos/lib/QtGui.framework/Headers -I../../Qt/6.4.1/macos/lib/QtCore.framework/Headers -I. -I/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk/System/Library/Frameworks/OpenGL.framework/Headers -I/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk/System/Library/Frameworks/AGL.framework/Headers -I. -I/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk/System/Library/Frameworks/OpenGL.framework/Headers -I/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk/System/Library/Frameworks/AGL.framework/Headers -I../../Qt/6.4.1/macos/mkspecs/macx-clang -F/Users/mindgood/Qt/6.4.1/macos/lib
+INCPATH       = -I../ChangeFontSize -I. -I../../../Qt/6.4.1/macos/lib/QtWidgets.framework/Headers -I../../../Qt/6.4.1/macos/lib/QtGui.framework/Headers -I../../../Qt/6.4.1/macos/lib/QtCore.framework/Headers -I. -I/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk/System/Library/Frameworks/OpenGL.framework/Headers -I/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk/System/Library/Frameworks/AGL.framework/Headers -I. -I/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk/System/Library/Frameworks/OpenGL.framework/Headers -I/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk/System/Library/Frameworks/AGL.framework/Headers -I../../../Qt/6.4.1/macos/mkspecs/macx-clang -F/Users/mindgood/Qt/6.4.1/macos/lib
 QMAKE         = /Users/mindgood/Qt/6.4.1/macos/bin/qmake
 DEL_FILE      = rm -f
 CHK_DIR_EXISTS= test -d
@@ -37,7 +37,7 @@ MOVE          = mv -f
 TAR           = tar -cf
 COMPRESS      = gzip -9f
 DISTNAME      = MyTool1.0.0
-DISTDIR = /Users/mindgood/Documents/build-ChangeFontSize-Qt_6_4_1_for_macOS-Debug/.tmp/MyTool1.0.0
+DISTDIR = /Users/mindgood/Documents/Auxiliary-tools-for-reading-foreign-languages/build-ChangeFontSize-Qt_6_4_1_for_macOS-Debug/.tmp/MyTool1.0.0
 LINK          = /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++
 LFLAGS        = -stdlib=libc++ -headerpad_max_install_names $(EXPORT_ARCH_ARGS) -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk -mmacosx-version-min=10.14 -Wl,-rpath,@executable_path/../Frameworks -Wl,-rpath,/Users/mindgood/Qt/6.4.1/macos/lib
 LIBS          = $(SUBLIBS) -F/Users/mindgood/Qt/6.4.1/macos/lib -framework QtWidgets -framework QtGui -framework AppKit -framework ImageIO -framework Metal -framework QtCore -framework IOKit -framework DiskArbitration -framework AGL -framework OpenGL   
@@ -57,159 +57,160 @@ SOURCES       = ../ChangeFontSize/main.cpp \
 OBJECTS       = main.o \
 		mainwindow.o \
 		moc_mainwindow.o
-DIST          = ../../Qt/6.4.1/macos/mkspecs/features/spec_pre.prf \
-		../../Qt/6.4.1/macos/mkspecs/features/device_config.prf \
-		../../Qt/6.4.1/macos/mkspecs/common/unix.conf \
-		../../Qt/6.4.1/macos/mkspecs/common/mac.conf \
-		../../Qt/6.4.1/macos/mkspecs/common/macx.conf \
-		../../Qt/6.4.1/macos/mkspecs/common/sanitize.conf \
-		../../Qt/6.4.1/macos/mkspecs/common/gcc-base.conf \
-		../../Qt/6.4.1/macos/mkspecs/common/gcc-base-mac.conf \
-		../../Qt/6.4.1/macos/mkspecs/common/clang.conf \
-		../../Qt/6.4.1/macos/mkspecs/common/clang-mac.conf \
-		../../Qt/6.4.1/macos/mkspecs/qconfig.pri \
-		../../Qt/6.4.1/macos/mkspecs/modules/qt_ext_freetype.pri \
-		../../Qt/6.4.1/macos/mkspecs/modules/qt_ext_libjpeg.pri \
-		../../Qt/6.4.1/macos/mkspecs/modules/qt_ext_libpng.pri \
-		../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_concurrent.pri \
-		../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_concurrent_private.pri \
-		../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_core.pri \
-		../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_core_private.pri \
-		../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_dbus.pri \
-		../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_dbus_private.pri \
-		../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_designer.pri \
-		../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_designer_private.pri \
-		../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_designercomponents_private.pri \
-		../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_devicediscovery_support_private.pri \
-		../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_fb_support_private.pri \
-		../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_freetype_private.pri \
-		../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_gui.pri \
-		../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_gui_private.pri \
-		../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_harfbuzz_private.pri \
-		../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_help.pri \
-		../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_help_private.pri \
-		../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_jpeg_private.pri \
-		../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_labsanimation.pri \
-		../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_labsanimation_private.pri \
-		../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_labsfolderlistmodel.pri \
-		../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_labsfolderlistmodel_private.pri \
-		../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_labsqmlmodels.pri \
-		../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_labsqmlmodels_private.pri \
-		../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_labssettings.pri \
-		../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_labssettings_private.pri \
-		../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_labssharedimage.pri \
-		../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_labssharedimage_private.pri \
-		../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_labswavefrontmesh.pri \
-		../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_labswavefrontmesh_private.pri \
-		../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_linguist.pri \
-		../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_linguist_private.pri \
-		../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_network.pri \
-		../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_network_private.pri \
-		../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_opengl.pri \
-		../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_opengl_private.pri \
-		../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_openglwidgets.pri \
-		../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_openglwidgets_private.pri \
-		../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_packetprotocol_private.pri \
-		../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_png_private.pri \
-		../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_printsupport.pri \
-		../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_printsupport_private.pri \
-		../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_qml.pri \
-		../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_qml_private.pri \
-		../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_qmlcompiler_private.pri \
-		../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_qmlcore.pri \
-		../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_qmlcore_private.pri \
-		../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_qmldebug_private.pri \
-		../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_qmldom_private.pri \
-		../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_qmlintegration.pri \
-		../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_qmlintegration_private.pri \
-		../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_qmllocalstorage.pri \
-		../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_qmllocalstorage_private.pri \
-		../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_qmlmodels.pri \
-		../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_qmlmodels_private.pri \
-		../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_qmltest.pri \
-		../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_qmltest_private.pri \
-		../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_qmlworkerscript.pri \
-		../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_qmlworkerscript_private.pri \
-		../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_qmlxmllistmodel.pri \
-		../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_qmlxmllistmodel_private.pri \
-		../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_quick.pri \
-		../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_quick_private.pri \
-		../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_quickcontrols2.pri \
-		../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_quickcontrols2_private.pri \
-		../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_quickcontrols2impl.pri \
-		../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_quickcontrols2impl_private.pri \
-		../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_quickcontrolstestutilsprivate_private.pri \
-		../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_quickdialogs2.pri \
-		../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_quickdialogs2_private.pri \
-		../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_quickdialogs2quickimpl.pri \
-		../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_quickdialogs2quickimpl_private.pri \
-		../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_quickdialogs2utils.pri \
-		../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_quickdialogs2utils_private.pri \
-		../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_quicklayouts.pri \
-		../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_quicklayouts_private.pri \
-		../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_quickparticles_private.pri \
-		../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_quickshapes_private.pri \
-		../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_quicktemplates2.pri \
-		../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_quicktemplates2_private.pri \
-		../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_quicktestutilsprivate_private.pri \
-		../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_quicktimeline.pri \
-		../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_quicktimeline_private.pri \
-		../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_quickwidgets.pri \
-		../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_quickwidgets_private.pri \
-		../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_remoteobjects.pri \
-		../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_remoteobjects_private.pri \
-		../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_remoteobjectsqml.pri \
-		../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_remoteobjectsqml_private.pri \
-		../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_repparser.pri \
-		../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_repparser_private.pri \
-		../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_sql.pri \
-		../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_sql_private.pri \
-		../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_svg.pri \
-		../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_svg_private.pri \
-		../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_svgwidgets.pri \
-		../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_svgwidgets_private.pri \
-		../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_testlib.pri \
-		../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_testlib_private.pri \
-		../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_tools_private.pri \
-		../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_uiplugin.pri \
-		../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_uitools.pri \
-		../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_uitools_private.pri \
-		../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_widgets.pri \
-		../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_widgets_private.pri \
-		../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_xml.pri \
-		../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_xml_private.pri \
-		../../Qt/6.4.1/macos/mkspecs/features/qt_functions.prf \
-		../../Qt/6.4.1/macos/mkspecs/features/qt_config.prf \
-		../../Qt/6.4.1/macos/mkspecs/macx-clang/qmake.conf \
-		../../Qt/6.4.1/macos/mkspecs/features/spec_post.prf \
-		../../Qt/6.4.1/macos/mkspecs/features/exclusive_builds.prf \
-		../../Qt/6.4.1/macos/mkspecs/features/mac/sdk.prf \
-		../../Qt/6.4.1/macos/mkspecs/features/toolchain.prf \
-		../../Qt/6.4.1/macos/mkspecs/features/mac/toolchain.prf \
-		../../Qt/6.4.1/macos/mkspecs/features/default_pre.prf \
-		../../Qt/6.4.1/macos/mkspecs/features/mac/default_pre.prf \
-		../../Qt/6.4.1/macos/mkspecs/features/resolve_config.prf \
-		../../Qt/6.4.1/macos/mkspecs/features/default_post.prf \
-		../../Qt/6.4.1/macos/mkspecs/features/mac/default_post.prf \
-		../../Qt/6.4.1/macos/mkspecs/features/mac/objective_c.prf \
-		../../Qt/6.4.1/macos/mkspecs/features/qml_debug.prf \
-		../../Qt/6.4.1/macos/mkspecs/features/mac/mac.prf \
-		../../Qt/6.4.1/macos/mkspecs/features/warn_on.prf \
-		../../Qt/6.4.1/macos/mkspecs/features/qt.prf \
-		../../Qt/6.4.1/macos/mkspecs/features/resources_functions.prf \
-		../../Qt/6.4.1/macos/mkspecs/features/resources.prf \
-		../../Qt/6.4.1/macos/mkspecs/features/moc.prf \
-		../../Qt/6.4.1/macos/mkspecs/features/unix/opengl.prf \
-		../../Qt/6.4.1/macos/mkspecs/features/uic.prf \
-		../../Qt/6.4.1/macos/mkspecs/features/unix/thread.prf \
-		../../Qt/6.4.1/macos/mkspecs/features/qmake_use.prf \
-		../../Qt/6.4.1/macos/mkspecs/features/file_copies.prf \
-		../../Qt/6.4.1/macos/mkspecs/features/mac/rez.prf \
-		../../Qt/6.4.1/macos/mkspecs/features/mac/asset_catalogs.prf \
-		../../Qt/6.4.1/macos/mkspecs/features/testcase_targets.prf \
-		../../Qt/6.4.1/macos/mkspecs/features/exceptions.prf \
-		../../Qt/6.4.1/macos/mkspecs/features/yacc.prf \
-		../../Qt/6.4.1/macos/mkspecs/features/lex.prf \
+DIST          = ../../../Qt/6.4.1/macos/mkspecs/features/spec_pre.prf \
+		../../../Qt/6.4.1/macos/mkspecs/features/device_config.prf \
+		../../../Qt/6.4.1/macos/mkspecs/common/unix.conf \
+		../../../Qt/6.4.1/macos/mkspecs/common/mac.conf \
+		../../../Qt/6.4.1/macos/mkspecs/common/macx.conf \
+		../../../Qt/6.4.1/macos/mkspecs/common/sanitize.conf \
+		../../../Qt/6.4.1/macos/mkspecs/common/gcc-base.conf \
+		../../../Qt/6.4.1/macos/mkspecs/common/gcc-base-mac.conf \
+		../../../Qt/6.4.1/macos/mkspecs/common/clang.conf \
+		../../../Qt/6.4.1/macos/mkspecs/common/clang-mac.conf \
+		../../../Qt/6.4.1/macos/mkspecs/qconfig.pri \
+		../../../Qt/6.4.1/macos/mkspecs/modules/qt_ext_freetype.pri \
+		../../../Qt/6.4.1/macos/mkspecs/modules/qt_ext_libjpeg.pri \
+		../../../Qt/6.4.1/macos/mkspecs/modules/qt_ext_libpng.pri \
+		../../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_concurrent.pri \
+		../../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_concurrent_private.pri \
+		../../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_core.pri \
+		../../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_core_private.pri \
+		../../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_dbus.pri \
+		../../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_dbus_private.pri \
+		../../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_designer.pri \
+		../../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_designer_private.pri \
+		../../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_designercomponents_private.pri \
+		../../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_devicediscovery_support_private.pri \
+		../../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_fb_support_private.pri \
+		../../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_freetype_private.pri \
+		../../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_gui.pri \
+		../../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_gui_private.pri \
+		../../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_harfbuzz_private.pri \
+		../../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_help.pri \
+		../../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_help_private.pri \
+		../../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_jpeg_private.pri \
+		../../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_labsanimation.pri \
+		../../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_labsanimation_private.pri \
+		../../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_labsfolderlistmodel.pri \
+		../../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_labsfolderlistmodel_private.pri \
+		../../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_labsqmlmodels.pri \
+		../../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_labsqmlmodels_private.pri \
+		../../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_labssettings.pri \
+		../../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_labssettings_private.pri \
+		../../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_labssharedimage.pri \
+		../../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_labssharedimage_private.pri \
+		../../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_labswavefrontmesh.pri \
+		../../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_labswavefrontmesh_private.pri \
+		../../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_linguist.pri \
+		../../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_linguist_private.pri \
+		../../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_network.pri \
+		../../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_network_private.pri \
+		../../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_opengl.pri \
+		../../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_opengl_private.pri \
+		../../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_openglwidgets.pri \
+		../../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_openglwidgets_private.pri \
+		../../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_packetprotocol_private.pri \
+		../../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_png_private.pri \
+		../../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_printsupport.pri \
+		../../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_printsupport_private.pri \
+		../../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_qml.pri \
+		../../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_qml_private.pri \
+		../../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_qmlcompiler_private.pri \
+		../../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_qmlcore.pri \
+		../../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_qmlcore_private.pri \
+		../../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_qmldebug_private.pri \
+		../../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_qmldom_private.pri \
+		../../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_qmlintegration.pri \
+		../../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_qmlintegration_private.pri \
+		../../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_qmllocalstorage.pri \
+		../../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_qmllocalstorage_private.pri \
+		../../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_qmlmodels.pri \
+		../../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_qmlmodels_private.pri \
+		../../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_qmltest.pri \
+		../../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_qmltest_private.pri \
+		../../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_qmlworkerscript.pri \
+		../../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_qmlworkerscript_private.pri \
+		../../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_qmlxmllistmodel.pri \
+		../../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_qmlxmllistmodel_private.pri \
+		../../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_quick.pri \
+		../../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_quick_private.pri \
+		../../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_quickcontrols2.pri \
+		../../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_quickcontrols2_private.pri \
+		../../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_quickcontrols2impl.pri \
+		../../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_quickcontrols2impl_private.pri \
+		../../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_quickcontrolstestutilsprivate_private.pri \
+		../../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_quickdialogs2.pri \
+		../../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_quickdialogs2_private.pri \
+		../../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_quickdialogs2quickimpl.pri \
+		../../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_quickdialogs2quickimpl_private.pri \
+		../../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_quickdialogs2utils.pri \
+		../../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_quickdialogs2utils_private.pri \
+		../../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_quicklayouts.pri \
+		../../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_quicklayouts_private.pri \
+		../../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_quickparticles_private.pri \
+		../../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_quickshapes_private.pri \
+		../../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_quicktemplates2.pri \
+		../../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_quicktemplates2_private.pri \
+		../../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_quicktestutilsprivate_private.pri \
+		../../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_quicktimeline.pri \
+		../../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_quicktimeline_private.pri \
+		../../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_quickwidgets.pri \
+		../../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_quickwidgets_private.pri \
+		../../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_remoteobjects.pri \
+		../../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_remoteobjects_private.pri \
+		../../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_remoteobjectsqml.pri \
+		../../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_remoteobjectsqml_private.pri \
+		../../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_repparser.pri \
+		../../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_repparser_private.pri \
+		../../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_sql.pri \
+		../../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_sql_private.pri \
+		../../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_svg.pri \
+		../../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_svg_private.pri \
+		../../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_svgwidgets.pri \
+		../../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_svgwidgets_private.pri \
+		../../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_testlib.pri \
+		../../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_testlib_private.pri \
+		../../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_tools_private.pri \
+		../../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_uiplugin.pri \
+		../../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_uitools.pri \
+		../../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_uitools_private.pri \
+		../../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_widgets.pri \
+		../../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_widgets_private.pri \
+		../../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_xml.pri \
+		../../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_xml_private.pri \
+		../../../Qt/6.4.1/macos/mkspecs/features/qt_functions.prf \
+		../../../Qt/6.4.1/macos/mkspecs/features/qt_config.prf \
+		../../../Qt/6.4.1/macos/mkspecs/macx-clang/qmake.conf \
+		../../../Qt/6.4.1/macos/mkspecs/features/spec_post.prf \
+		../ChangeFontSize/.qmake.stash \
+		../../../Qt/6.4.1/macos/mkspecs/features/exclusive_builds.prf \
+		../../../Qt/6.4.1/macos/mkspecs/features/mac/sdk.prf \
+		../../../Qt/6.4.1/macos/mkspecs/features/toolchain.prf \
+		../../../Qt/6.4.1/macos/mkspecs/features/mac/toolchain.prf \
+		../../../Qt/6.4.1/macos/mkspecs/features/default_pre.prf \
+		../../../Qt/6.4.1/macos/mkspecs/features/mac/default_pre.prf \
+		../../../Qt/6.4.1/macos/mkspecs/features/resolve_config.prf \
+		../../../Qt/6.4.1/macos/mkspecs/features/default_post.prf \
+		../../../Qt/6.4.1/macos/mkspecs/features/mac/default_post.prf \
+		../../../Qt/6.4.1/macos/mkspecs/features/mac/objective_c.prf \
+		../../../Qt/6.4.1/macos/mkspecs/features/qml_debug.prf \
+		../../../Qt/6.4.1/macos/mkspecs/features/mac/mac.prf \
+		../../../Qt/6.4.1/macos/mkspecs/features/warn_on.prf \
+		../../../Qt/6.4.1/macos/mkspecs/features/qt.prf \
+		../../../Qt/6.4.1/macos/mkspecs/features/resources_functions.prf \
+		../../../Qt/6.4.1/macos/mkspecs/features/resources.prf \
+		../../../Qt/6.4.1/macos/mkspecs/features/moc.prf \
+		../../../Qt/6.4.1/macos/mkspecs/features/unix/opengl.prf \
+		../../../Qt/6.4.1/macos/mkspecs/features/uic.prf \
+		../../../Qt/6.4.1/macos/mkspecs/features/unix/thread.prf \
+		../../../Qt/6.4.1/macos/mkspecs/features/qmake_use.prf \
+		../../../Qt/6.4.1/macos/mkspecs/features/file_copies.prf \
+		../../../Qt/6.4.1/macos/mkspecs/features/mac/rez.prf \
+		../../../Qt/6.4.1/macos/mkspecs/features/mac/asset_catalogs.prf \
+		../../../Qt/6.4.1/macos/mkspecs/features/testcase_targets.prf \
+		../../../Qt/6.4.1/macos/mkspecs/features/exceptions.prf \
+		../../../Qt/6.4.1/macos/mkspecs/features/yacc.prf \
+		../../../Qt/6.4.1/macos/mkspecs/features/lex.prf \
 		../ChangeFontSize/ChangeFontSize.pro ../ChangeFontSize/mainwindow.h ../ChangeFontSize/main.cpp \
 		../ChangeFontSize/mainwindow.cpp
 QMAKE_TARGET  = MyTool
@@ -220,12 +221,12 @@ TARGET        = MyTool.app/Contents/MacOS/MyTool
 EXPORT_QMAKE_MAC_SDK = macosx
 EXPORT_QMAKE_MAC_SDK_VERSION = 13.0
 EXPORT_QMAKE_XCODE_DEVELOPER_PATH = /Applications/Xcode.app/Contents/Developer
-EXPORT__QMAKE_STASH_ = 
+EXPORT__QMAKE_STASH_ = /Users/mindgood/Documents/Auxiliary-tools-for-reading-foreign-languages/build-ChangeFontSize-Qt_6_4_1_for_macOS-Debug/.qmake.stash
 EXPORT_VALID_ARCHS = x86_64 arm64
 EXPORT_DEFAULT_ARCHS = x86_64
 EXPORT_ARCHS = $(filter $(EXPORT_VALID_ARCHS), $(if $(ARCHS), $(ARCHS), $(if $(EXPORT_DEFAULT_ARCHS), $(EXPORT_DEFAULT_ARCHS), $(EXPORT_VALID_ARCHS))))
 EXPORT_ARCH_ARGS = $(foreach arch, $(if $(EXPORT_ARCHS), $(EXPORT_ARCHS), $(EXPORT_VALID_ARCHS)), -arch $(arch))
-EXPORT__PRO_FILE_ = /Users/mindgood/Documents/ChangeFontSize/ChangeFontSize.pro
+EXPORT__PRO_FILE_ = /Users/mindgood/Documents/Auxiliary-tools-for-reading-foreign-languages/ChangeFontSize/ChangeFontSize.pro
 
 
 include /Users/mindgood/Qt/6.4.1/macos/mkspecs/features/mac/sdk.mk
@@ -236,321 +237,323 @@ MyTool.app/Contents/MacOS/MyTool: ui_mainwindow.h $(OBJECTS)
 	@test -d MyTool.app/Contents/MacOS/ || mkdir -p MyTool.app/Contents/MacOS/
 	$(LINK) $(LFLAGS) -o $(TARGET)  $(OBJECTS) $(OBJCOMP) $(LIBS)
 
-Makefile: ../ChangeFontSize/ChangeFontSize.pro ../../Qt/6.4.1/macos/mkspecs/macx-clang/qmake.conf ../../Qt/6.4.1/macos/mkspecs/features/spec_pre.prf \
-		../../Qt/6.4.1/macos/mkspecs/features/device_config.prf \
-		../../Qt/6.4.1/macos/mkspecs/common/unix.conf \
-		../../Qt/6.4.1/macos/mkspecs/common/mac.conf \
-		../../Qt/6.4.1/macos/mkspecs/common/macx.conf \
-		../../Qt/6.4.1/macos/mkspecs/common/sanitize.conf \
-		../../Qt/6.4.1/macos/mkspecs/common/gcc-base.conf \
-		../../Qt/6.4.1/macos/mkspecs/common/gcc-base-mac.conf \
-		../../Qt/6.4.1/macos/mkspecs/common/clang.conf \
-		../../Qt/6.4.1/macos/mkspecs/common/clang-mac.conf \
-		../../Qt/6.4.1/macos/mkspecs/qconfig.pri \
-		../../Qt/6.4.1/macos/mkspecs/modules/qt_ext_freetype.pri \
-		../../Qt/6.4.1/macos/mkspecs/modules/qt_ext_libjpeg.pri \
-		../../Qt/6.4.1/macos/mkspecs/modules/qt_ext_libpng.pri \
-		../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_concurrent.pri \
-		../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_concurrent_private.pri \
-		../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_core.pri \
-		../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_core_private.pri \
-		../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_dbus.pri \
-		../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_dbus_private.pri \
-		../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_designer.pri \
-		../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_designer_private.pri \
-		../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_designercomponents_private.pri \
-		../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_devicediscovery_support_private.pri \
-		../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_fb_support_private.pri \
-		../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_freetype_private.pri \
-		../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_gui.pri \
-		../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_gui_private.pri \
-		../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_harfbuzz_private.pri \
-		../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_help.pri \
-		../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_help_private.pri \
-		../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_jpeg_private.pri \
-		../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_labsanimation.pri \
-		../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_labsanimation_private.pri \
-		../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_labsfolderlistmodel.pri \
-		../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_labsfolderlistmodel_private.pri \
-		../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_labsqmlmodels.pri \
-		../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_labsqmlmodels_private.pri \
-		../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_labssettings.pri \
-		../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_labssettings_private.pri \
-		../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_labssharedimage.pri \
-		../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_labssharedimage_private.pri \
-		../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_labswavefrontmesh.pri \
-		../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_labswavefrontmesh_private.pri \
-		../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_linguist.pri \
-		../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_linguist_private.pri \
-		../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_network.pri \
-		../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_network_private.pri \
-		../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_opengl.pri \
-		../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_opengl_private.pri \
-		../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_openglwidgets.pri \
-		../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_openglwidgets_private.pri \
-		../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_packetprotocol_private.pri \
-		../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_png_private.pri \
-		../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_printsupport.pri \
-		../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_printsupport_private.pri \
-		../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_qml.pri \
-		../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_qml_private.pri \
-		../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_qmlcompiler_private.pri \
-		../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_qmlcore.pri \
-		../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_qmlcore_private.pri \
-		../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_qmldebug_private.pri \
-		../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_qmldom_private.pri \
-		../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_qmlintegration.pri \
-		../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_qmlintegration_private.pri \
-		../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_qmllocalstorage.pri \
-		../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_qmllocalstorage_private.pri \
-		../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_qmlmodels.pri \
-		../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_qmlmodels_private.pri \
-		../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_qmltest.pri \
-		../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_qmltest_private.pri \
-		../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_qmlworkerscript.pri \
-		../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_qmlworkerscript_private.pri \
-		../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_qmlxmllistmodel.pri \
-		../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_qmlxmllistmodel_private.pri \
-		../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_quick.pri \
-		../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_quick_private.pri \
-		../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_quickcontrols2.pri \
-		../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_quickcontrols2_private.pri \
-		../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_quickcontrols2impl.pri \
-		../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_quickcontrols2impl_private.pri \
-		../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_quickcontrolstestutilsprivate_private.pri \
-		../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_quickdialogs2.pri \
-		../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_quickdialogs2_private.pri \
-		../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_quickdialogs2quickimpl.pri \
-		../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_quickdialogs2quickimpl_private.pri \
-		../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_quickdialogs2utils.pri \
-		../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_quickdialogs2utils_private.pri \
-		../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_quicklayouts.pri \
-		../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_quicklayouts_private.pri \
-		../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_quickparticles_private.pri \
-		../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_quickshapes_private.pri \
-		../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_quicktemplates2.pri \
-		../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_quicktemplates2_private.pri \
-		../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_quicktestutilsprivate_private.pri \
-		../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_quicktimeline.pri \
-		../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_quicktimeline_private.pri \
-		../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_quickwidgets.pri \
-		../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_quickwidgets_private.pri \
-		../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_remoteobjects.pri \
-		../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_remoteobjects_private.pri \
-		../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_remoteobjectsqml.pri \
-		../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_remoteobjectsqml_private.pri \
-		../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_repparser.pri \
-		../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_repparser_private.pri \
-		../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_sql.pri \
-		../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_sql_private.pri \
-		../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_svg.pri \
-		../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_svg_private.pri \
-		../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_svgwidgets.pri \
-		../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_svgwidgets_private.pri \
-		../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_testlib.pri \
-		../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_testlib_private.pri \
-		../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_tools_private.pri \
-		../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_uiplugin.pri \
-		../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_uitools.pri \
-		../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_uitools_private.pri \
-		../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_widgets.pri \
-		../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_widgets_private.pri \
-		../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_xml.pri \
-		../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_xml_private.pri \
-		../../Qt/6.4.1/macos/mkspecs/features/qt_functions.prf \
-		../../Qt/6.4.1/macos/mkspecs/features/qt_config.prf \
-		../../Qt/6.4.1/macos/mkspecs/macx-clang/qmake.conf \
-		../../Qt/6.4.1/macos/mkspecs/features/spec_post.prf \
-		../../Qt/6.4.1/macos/mkspecs/features/exclusive_builds.prf \
-		../../Qt/6.4.1/macos/mkspecs/features/mac/sdk.prf \
-		../../Qt/6.4.1/macos/mkspecs/features/toolchain.prf \
-		../../Qt/6.4.1/macos/mkspecs/features/mac/toolchain.prf \
-		../../Qt/6.4.1/macos/mkspecs/features/default_pre.prf \
-		../../Qt/6.4.1/macos/mkspecs/features/mac/default_pre.prf \
-		../../Qt/6.4.1/macos/mkspecs/features/resolve_config.prf \
-		../../Qt/6.4.1/macos/mkspecs/features/default_post.prf \
-		../../Qt/6.4.1/macos/mkspecs/features/mac/default_post.prf \
-		../../Qt/6.4.1/macos/mkspecs/features/mac/objective_c.prf \
-		../../Qt/6.4.1/macos/mkspecs/features/qml_debug.prf \
-		../../Qt/6.4.1/macos/mkspecs/features/mac/mac.prf \
-		../../Qt/6.4.1/macos/mkspecs/features/warn_on.prf \
-		../../Qt/6.4.1/macos/mkspecs/features/qt.prf \
-		../../Qt/6.4.1/macos/mkspecs/features/resources_functions.prf \
-		../../Qt/6.4.1/macos/mkspecs/features/resources.prf \
-		../../Qt/6.4.1/macos/mkspecs/features/moc.prf \
-		../../Qt/6.4.1/macos/mkspecs/features/unix/opengl.prf \
-		../../Qt/6.4.1/macos/mkspecs/features/uic.prf \
-		../../Qt/6.4.1/macos/mkspecs/features/unix/thread.prf \
-		../../Qt/6.4.1/macos/mkspecs/features/qmake_use.prf \
-		../../Qt/6.4.1/macos/mkspecs/features/file_copies.prf \
-		../../Qt/6.4.1/macos/mkspecs/features/mac/rez.prf \
-		../../Qt/6.4.1/macos/mkspecs/features/mac/asset_catalogs.prf \
-		../../Qt/6.4.1/macos/mkspecs/features/testcase_targets.prf \
-		../../Qt/6.4.1/macos/mkspecs/features/exceptions.prf \
-		../../Qt/6.4.1/macos/mkspecs/features/yacc.prf \
-		../../Qt/6.4.1/macos/mkspecs/features/lex.prf \
+Makefile: ../ChangeFontSize/ChangeFontSize.pro ../../../Qt/6.4.1/macos/mkspecs/macx-clang/qmake.conf ../../../Qt/6.4.1/macos/mkspecs/features/spec_pre.prf \
+		../../../Qt/6.4.1/macos/mkspecs/features/device_config.prf \
+		../../../Qt/6.4.1/macos/mkspecs/common/unix.conf \
+		../../../Qt/6.4.1/macos/mkspecs/common/mac.conf \
+		../../../Qt/6.4.1/macos/mkspecs/common/macx.conf \
+		../../../Qt/6.4.1/macos/mkspecs/common/sanitize.conf \
+		../../../Qt/6.4.1/macos/mkspecs/common/gcc-base.conf \
+		../../../Qt/6.4.1/macos/mkspecs/common/gcc-base-mac.conf \
+		../../../Qt/6.4.1/macos/mkspecs/common/clang.conf \
+		../../../Qt/6.4.1/macos/mkspecs/common/clang-mac.conf \
+		../../../Qt/6.4.1/macos/mkspecs/qconfig.pri \
+		../../../Qt/6.4.1/macos/mkspecs/modules/qt_ext_freetype.pri \
+		../../../Qt/6.4.1/macos/mkspecs/modules/qt_ext_libjpeg.pri \
+		../../../Qt/6.4.1/macos/mkspecs/modules/qt_ext_libpng.pri \
+		../../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_concurrent.pri \
+		../../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_concurrent_private.pri \
+		../../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_core.pri \
+		../../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_core_private.pri \
+		../../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_dbus.pri \
+		../../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_dbus_private.pri \
+		../../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_designer.pri \
+		../../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_designer_private.pri \
+		../../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_designercomponents_private.pri \
+		../../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_devicediscovery_support_private.pri \
+		../../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_fb_support_private.pri \
+		../../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_freetype_private.pri \
+		../../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_gui.pri \
+		../../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_gui_private.pri \
+		../../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_harfbuzz_private.pri \
+		../../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_help.pri \
+		../../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_help_private.pri \
+		../../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_jpeg_private.pri \
+		../../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_labsanimation.pri \
+		../../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_labsanimation_private.pri \
+		../../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_labsfolderlistmodel.pri \
+		../../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_labsfolderlistmodel_private.pri \
+		../../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_labsqmlmodels.pri \
+		../../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_labsqmlmodels_private.pri \
+		../../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_labssettings.pri \
+		../../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_labssettings_private.pri \
+		../../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_labssharedimage.pri \
+		../../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_labssharedimage_private.pri \
+		../../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_labswavefrontmesh.pri \
+		../../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_labswavefrontmesh_private.pri \
+		../../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_linguist.pri \
+		../../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_linguist_private.pri \
+		../../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_network.pri \
+		../../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_network_private.pri \
+		../../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_opengl.pri \
+		../../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_opengl_private.pri \
+		../../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_openglwidgets.pri \
+		../../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_openglwidgets_private.pri \
+		../../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_packetprotocol_private.pri \
+		../../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_png_private.pri \
+		../../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_printsupport.pri \
+		../../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_printsupport_private.pri \
+		../../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_qml.pri \
+		../../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_qml_private.pri \
+		../../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_qmlcompiler_private.pri \
+		../../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_qmlcore.pri \
+		../../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_qmlcore_private.pri \
+		../../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_qmldebug_private.pri \
+		../../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_qmldom_private.pri \
+		../../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_qmlintegration.pri \
+		../../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_qmlintegration_private.pri \
+		../../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_qmllocalstorage.pri \
+		../../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_qmllocalstorage_private.pri \
+		../../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_qmlmodels.pri \
+		../../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_qmlmodels_private.pri \
+		../../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_qmltest.pri \
+		../../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_qmltest_private.pri \
+		../../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_qmlworkerscript.pri \
+		../../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_qmlworkerscript_private.pri \
+		../../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_qmlxmllistmodel.pri \
+		../../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_qmlxmllistmodel_private.pri \
+		../../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_quick.pri \
+		../../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_quick_private.pri \
+		../../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_quickcontrols2.pri \
+		../../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_quickcontrols2_private.pri \
+		../../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_quickcontrols2impl.pri \
+		../../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_quickcontrols2impl_private.pri \
+		../../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_quickcontrolstestutilsprivate_private.pri \
+		../../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_quickdialogs2.pri \
+		../../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_quickdialogs2_private.pri \
+		../../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_quickdialogs2quickimpl.pri \
+		../../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_quickdialogs2quickimpl_private.pri \
+		../../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_quickdialogs2utils.pri \
+		../../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_quickdialogs2utils_private.pri \
+		../../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_quicklayouts.pri \
+		../../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_quicklayouts_private.pri \
+		../../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_quickparticles_private.pri \
+		../../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_quickshapes_private.pri \
+		../../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_quicktemplates2.pri \
+		../../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_quicktemplates2_private.pri \
+		../../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_quicktestutilsprivate_private.pri \
+		../../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_quicktimeline.pri \
+		../../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_quicktimeline_private.pri \
+		../../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_quickwidgets.pri \
+		../../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_quickwidgets_private.pri \
+		../../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_remoteobjects.pri \
+		../../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_remoteobjects_private.pri \
+		../../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_remoteobjectsqml.pri \
+		../../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_remoteobjectsqml_private.pri \
+		../../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_repparser.pri \
+		../../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_repparser_private.pri \
+		../../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_sql.pri \
+		../../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_sql_private.pri \
+		../../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_svg.pri \
+		../../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_svg_private.pri \
+		../../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_svgwidgets.pri \
+		../../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_svgwidgets_private.pri \
+		../../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_testlib.pri \
+		../../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_testlib_private.pri \
+		../../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_tools_private.pri \
+		../../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_uiplugin.pri \
+		../../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_uitools.pri \
+		../../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_uitools_private.pri \
+		../../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_widgets.pri \
+		../../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_widgets_private.pri \
+		../../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_xml.pri \
+		../../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_xml_private.pri \
+		../../../Qt/6.4.1/macos/mkspecs/features/qt_functions.prf \
+		../../../Qt/6.4.1/macos/mkspecs/features/qt_config.prf \
+		../../../Qt/6.4.1/macos/mkspecs/macx-clang/qmake.conf \
+		../../../Qt/6.4.1/macos/mkspecs/features/spec_post.prf \
+		.qmake.stash \
+		../../../Qt/6.4.1/macos/mkspecs/features/exclusive_builds.prf \
+		../../../Qt/6.4.1/macos/mkspecs/features/mac/sdk.prf \
+		../../../Qt/6.4.1/macos/mkspecs/features/toolchain.prf \
+		../../../Qt/6.4.1/macos/mkspecs/features/mac/toolchain.prf \
+		../../../Qt/6.4.1/macos/mkspecs/features/default_pre.prf \
+		../../../Qt/6.4.1/macos/mkspecs/features/mac/default_pre.prf \
+		../../../Qt/6.4.1/macos/mkspecs/features/resolve_config.prf \
+		../../../Qt/6.4.1/macos/mkspecs/features/default_post.prf \
+		../../../Qt/6.4.1/macos/mkspecs/features/mac/default_post.prf \
+		../../../Qt/6.4.1/macos/mkspecs/features/mac/objective_c.prf \
+		../../../Qt/6.4.1/macos/mkspecs/features/qml_debug.prf \
+		../../../Qt/6.4.1/macos/mkspecs/features/mac/mac.prf \
+		../../../Qt/6.4.1/macos/mkspecs/features/warn_on.prf \
+		../../../Qt/6.4.1/macos/mkspecs/features/qt.prf \
+		../../../Qt/6.4.1/macos/mkspecs/features/resources_functions.prf \
+		../../../Qt/6.4.1/macos/mkspecs/features/resources.prf \
+		../../../Qt/6.4.1/macos/mkspecs/features/moc.prf \
+		../../../Qt/6.4.1/macos/mkspecs/features/unix/opengl.prf \
+		../../../Qt/6.4.1/macos/mkspecs/features/uic.prf \
+		../../../Qt/6.4.1/macos/mkspecs/features/unix/thread.prf \
+		../../../Qt/6.4.1/macos/mkspecs/features/qmake_use.prf \
+		../../../Qt/6.4.1/macos/mkspecs/features/file_copies.prf \
+		../../../Qt/6.4.1/macos/mkspecs/features/mac/rez.prf \
+		../../../Qt/6.4.1/macos/mkspecs/features/mac/asset_catalogs.prf \
+		../../../Qt/6.4.1/macos/mkspecs/features/testcase_targets.prf \
+		../../../Qt/6.4.1/macos/mkspecs/features/exceptions.prf \
+		../../../Qt/6.4.1/macos/mkspecs/features/yacc.prf \
+		../../../Qt/6.4.1/macos/mkspecs/features/lex.prf \
 		../ChangeFontSize/ChangeFontSize.pro \
-		../../Qt/6.4.1/macos/lib/QtWidgets.framework/Resources/QtWidgets.prl \
-		../../Qt/6.4.1/macos/lib/QtGui.framework/Resources/QtGui.prl \
-		../../Qt/6.4.1/macos/lib/QtCore.framework/Resources/QtCore.prl
+		../../../Qt/6.4.1/macos/lib/QtWidgets.framework/Resources/QtWidgets.prl \
+		../../../Qt/6.4.1/macos/lib/QtGui.framework/Resources/QtGui.prl \
+		../../../Qt/6.4.1/macos/lib/QtCore.framework/Resources/QtCore.prl
 	$(QMAKE) -o Makefile ../ChangeFontSize/ChangeFontSize.pro -spec macx-clang CONFIG+=debug CONFIG+=qml_debug
-../../Qt/6.4.1/macos/mkspecs/features/spec_pre.prf:
-../../Qt/6.4.1/macos/mkspecs/features/device_config.prf:
-../../Qt/6.4.1/macos/mkspecs/common/unix.conf:
-../../Qt/6.4.1/macos/mkspecs/common/mac.conf:
-../../Qt/6.4.1/macos/mkspecs/common/macx.conf:
-../../Qt/6.4.1/macos/mkspecs/common/sanitize.conf:
-../../Qt/6.4.1/macos/mkspecs/common/gcc-base.conf:
-../../Qt/6.4.1/macos/mkspecs/common/gcc-base-mac.conf:
-../../Qt/6.4.1/macos/mkspecs/common/clang.conf:
-../../Qt/6.4.1/macos/mkspecs/common/clang-mac.conf:
-../../Qt/6.4.1/macos/mkspecs/qconfig.pri:
-../../Qt/6.4.1/macos/mkspecs/modules/qt_ext_freetype.pri:
-../../Qt/6.4.1/macos/mkspecs/modules/qt_ext_libjpeg.pri:
-../../Qt/6.4.1/macos/mkspecs/modules/qt_ext_libpng.pri:
-../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_concurrent.pri:
-../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_concurrent_private.pri:
-../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_core.pri:
-../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_core_private.pri:
-../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_dbus.pri:
-../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_dbus_private.pri:
-../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_designer.pri:
-../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_designer_private.pri:
-../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_designercomponents_private.pri:
-../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_devicediscovery_support_private.pri:
-../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_fb_support_private.pri:
-../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_freetype_private.pri:
-../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_gui.pri:
-../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_gui_private.pri:
-../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_harfbuzz_private.pri:
-../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_help.pri:
-../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_help_private.pri:
-../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_jpeg_private.pri:
-../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_labsanimation.pri:
-../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_labsanimation_private.pri:
-../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_labsfolderlistmodel.pri:
-../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_labsfolderlistmodel_private.pri:
-../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_labsqmlmodels.pri:
-../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_labsqmlmodels_private.pri:
-../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_labssettings.pri:
-../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_labssettings_private.pri:
-../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_labssharedimage.pri:
-../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_labssharedimage_private.pri:
-../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_labswavefrontmesh.pri:
-../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_labswavefrontmesh_private.pri:
-../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_linguist.pri:
-../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_linguist_private.pri:
-../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_network.pri:
-../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_network_private.pri:
-../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_opengl.pri:
-../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_opengl_private.pri:
-../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_openglwidgets.pri:
-../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_openglwidgets_private.pri:
-../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_packetprotocol_private.pri:
-../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_png_private.pri:
-../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_printsupport.pri:
-../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_printsupport_private.pri:
-../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_qml.pri:
-../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_qml_private.pri:
-../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_qmlcompiler_private.pri:
-../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_qmlcore.pri:
-../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_qmlcore_private.pri:
-../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_qmldebug_private.pri:
-../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_qmldom_private.pri:
-../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_qmlintegration.pri:
-../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_qmlintegration_private.pri:
-../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_qmllocalstorage.pri:
-../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_qmllocalstorage_private.pri:
-../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_qmlmodels.pri:
-../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_qmlmodels_private.pri:
-../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_qmltest.pri:
-../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_qmltest_private.pri:
-../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_qmlworkerscript.pri:
-../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_qmlworkerscript_private.pri:
-../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_qmlxmllistmodel.pri:
-../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_qmlxmllistmodel_private.pri:
-../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_quick.pri:
-../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_quick_private.pri:
-../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_quickcontrols2.pri:
-../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_quickcontrols2_private.pri:
-../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_quickcontrols2impl.pri:
-../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_quickcontrols2impl_private.pri:
-../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_quickcontrolstestutilsprivate_private.pri:
-../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_quickdialogs2.pri:
-../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_quickdialogs2_private.pri:
-../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_quickdialogs2quickimpl.pri:
-../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_quickdialogs2quickimpl_private.pri:
-../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_quickdialogs2utils.pri:
-../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_quickdialogs2utils_private.pri:
-../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_quicklayouts.pri:
-../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_quicklayouts_private.pri:
-../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_quickparticles_private.pri:
-../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_quickshapes_private.pri:
-../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_quicktemplates2.pri:
-../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_quicktemplates2_private.pri:
-../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_quicktestutilsprivate_private.pri:
-../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_quicktimeline.pri:
-../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_quicktimeline_private.pri:
-../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_quickwidgets.pri:
-../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_quickwidgets_private.pri:
-../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_remoteobjects.pri:
-../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_remoteobjects_private.pri:
-../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_remoteobjectsqml.pri:
-../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_remoteobjectsqml_private.pri:
-../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_repparser.pri:
-../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_repparser_private.pri:
-../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_sql.pri:
-../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_sql_private.pri:
-../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_svg.pri:
-../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_svg_private.pri:
-../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_svgwidgets.pri:
-../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_svgwidgets_private.pri:
-../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_testlib.pri:
-../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_testlib_private.pri:
-../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_tools_private.pri:
-../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_uiplugin.pri:
-../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_uitools.pri:
-../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_uitools_private.pri:
-../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_widgets.pri:
-../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_widgets_private.pri:
-../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_xml.pri:
-../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_xml_private.pri:
-../../Qt/6.4.1/macos/mkspecs/features/qt_functions.prf:
-../../Qt/6.4.1/macos/mkspecs/features/qt_config.prf:
-../../Qt/6.4.1/macos/mkspecs/macx-clang/qmake.conf:
-../../Qt/6.4.1/macos/mkspecs/features/spec_post.prf:
-../../Qt/6.4.1/macos/mkspecs/features/exclusive_builds.prf:
-../../Qt/6.4.1/macos/mkspecs/features/mac/sdk.prf:
-../../Qt/6.4.1/macos/mkspecs/features/toolchain.prf:
-../../Qt/6.4.1/macos/mkspecs/features/mac/toolchain.prf:
-../../Qt/6.4.1/macos/mkspecs/features/default_pre.prf:
-../../Qt/6.4.1/macos/mkspecs/features/mac/default_pre.prf:
-../../Qt/6.4.1/macos/mkspecs/features/resolve_config.prf:
-../../Qt/6.4.1/macos/mkspecs/features/default_post.prf:
-../../Qt/6.4.1/macos/mkspecs/features/mac/default_post.prf:
-../../Qt/6.4.1/macos/mkspecs/features/mac/objective_c.prf:
-../../Qt/6.4.1/macos/mkspecs/features/qml_debug.prf:
-../../Qt/6.4.1/macos/mkspecs/features/mac/mac.prf:
-../../Qt/6.4.1/macos/mkspecs/features/warn_on.prf:
-../../Qt/6.4.1/macos/mkspecs/features/qt.prf:
-../../Qt/6.4.1/macos/mkspecs/features/resources_functions.prf:
-../../Qt/6.4.1/macos/mkspecs/features/resources.prf:
-../../Qt/6.4.1/macos/mkspecs/features/moc.prf:
-../../Qt/6.4.1/macos/mkspecs/features/unix/opengl.prf:
-../../Qt/6.4.1/macos/mkspecs/features/uic.prf:
-../../Qt/6.4.1/macos/mkspecs/features/unix/thread.prf:
-../../Qt/6.4.1/macos/mkspecs/features/qmake_use.prf:
-../../Qt/6.4.1/macos/mkspecs/features/file_copies.prf:
-../../Qt/6.4.1/macos/mkspecs/features/mac/rez.prf:
-../../Qt/6.4.1/macos/mkspecs/features/mac/asset_catalogs.prf:
-../../Qt/6.4.1/macos/mkspecs/features/testcase_targets.prf:
-../../Qt/6.4.1/macos/mkspecs/features/exceptions.prf:
-../../Qt/6.4.1/macos/mkspecs/features/yacc.prf:
-../../Qt/6.4.1/macos/mkspecs/features/lex.prf:
+../../../Qt/6.4.1/macos/mkspecs/features/spec_pre.prf:
+../../../Qt/6.4.1/macos/mkspecs/features/device_config.prf:
+../../../Qt/6.4.1/macos/mkspecs/common/unix.conf:
+../../../Qt/6.4.1/macos/mkspecs/common/mac.conf:
+../../../Qt/6.4.1/macos/mkspecs/common/macx.conf:
+../../../Qt/6.4.1/macos/mkspecs/common/sanitize.conf:
+../../../Qt/6.4.1/macos/mkspecs/common/gcc-base.conf:
+../../../Qt/6.4.1/macos/mkspecs/common/gcc-base-mac.conf:
+../../../Qt/6.4.1/macos/mkspecs/common/clang.conf:
+../../../Qt/6.4.1/macos/mkspecs/common/clang-mac.conf:
+../../../Qt/6.4.1/macos/mkspecs/qconfig.pri:
+../../../Qt/6.4.1/macos/mkspecs/modules/qt_ext_freetype.pri:
+../../../Qt/6.4.1/macos/mkspecs/modules/qt_ext_libjpeg.pri:
+../../../Qt/6.4.1/macos/mkspecs/modules/qt_ext_libpng.pri:
+../../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_concurrent.pri:
+../../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_concurrent_private.pri:
+../../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_core.pri:
+../../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_core_private.pri:
+../../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_dbus.pri:
+../../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_dbus_private.pri:
+../../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_designer.pri:
+../../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_designer_private.pri:
+../../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_designercomponents_private.pri:
+../../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_devicediscovery_support_private.pri:
+../../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_fb_support_private.pri:
+../../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_freetype_private.pri:
+../../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_gui.pri:
+../../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_gui_private.pri:
+../../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_harfbuzz_private.pri:
+../../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_help.pri:
+../../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_help_private.pri:
+../../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_jpeg_private.pri:
+../../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_labsanimation.pri:
+../../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_labsanimation_private.pri:
+../../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_labsfolderlistmodel.pri:
+../../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_labsfolderlistmodel_private.pri:
+../../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_labsqmlmodels.pri:
+../../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_labsqmlmodels_private.pri:
+../../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_labssettings.pri:
+../../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_labssettings_private.pri:
+../../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_labssharedimage.pri:
+../../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_labssharedimage_private.pri:
+../../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_labswavefrontmesh.pri:
+../../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_labswavefrontmesh_private.pri:
+../../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_linguist.pri:
+../../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_linguist_private.pri:
+../../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_network.pri:
+../../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_network_private.pri:
+../../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_opengl.pri:
+../../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_opengl_private.pri:
+../../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_openglwidgets.pri:
+../../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_openglwidgets_private.pri:
+../../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_packetprotocol_private.pri:
+../../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_png_private.pri:
+../../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_printsupport.pri:
+../../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_printsupport_private.pri:
+../../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_qml.pri:
+../../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_qml_private.pri:
+../../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_qmlcompiler_private.pri:
+../../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_qmlcore.pri:
+../../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_qmlcore_private.pri:
+../../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_qmldebug_private.pri:
+../../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_qmldom_private.pri:
+../../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_qmlintegration.pri:
+../../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_qmlintegration_private.pri:
+../../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_qmllocalstorage.pri:
+../../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_qmllocalstorage_private.pri:
+../../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_qmlmodels.pri:
+../../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_qmlmodels_private.pri:
+../../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_qmltest.pri:
+../../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_qmltest_private.pri:
+../../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_qmlworkerscript.pri:
+../../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_qmlworkerscript_private.pri:
+../../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_qmlxmllistmodel.pri:
+../../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_qmlxmllistmodel_private.pri:
+../../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_quick.pri:
+../../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_quick_private.pri:
+../../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_quickcontrols2.pri:
+../../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_quickcontrols2_private.pri:
+../../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_quickcontrols2impl.pri:
+../../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_quickcontrols2impl_private.pri:
+../../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_quickcontrolstestutilsprivate_private.pri:
+../../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_quickdialogs2.pri:
+../../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_quickdialogs2_private.pri:
+../../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_quickdialogs2quickimpl.pri:
+../../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_quickdialogs2quickimpl_private.pri:
+../../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_quickdialogs2utils.pri:
+../../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_quickdialogs2utils_private.pri:
+../../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_quicklayouts.pri:
+../../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_quicklayouts_private.pri:
+../../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_quickparticles_private.pri:
+../../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_quickshapes_private.pri:
+../../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_quicktemplates2.pri:
+../../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_quicktemplates2_private.pri:
+../../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_quicktestutilsprivate_private.pri:
+../../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_quicktimeline.pri:
+../../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_quicktimeline_private.pri:
+../../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_quickwidgets.pri:
+../../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_quickwidgets_private.pri:
+../../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_remoteobjects.pri:
+../../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_remoteobjects_private.pri:
+../../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_remoteobjectsqml.pri:
+../../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_remoteobjectsqml_private.pri:
+../../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_repparser.pri:
+../../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_repparser_private.pri:
+../../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_sql.pri:
+../../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_sql_private.pri:
+../../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_svg.pri:
+../../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_svg_private.pri:
+../../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_svgwidgets.pri:
+../../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_svgwidgets_private.pri:
+../../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_testlib.pri:
+../../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_testlib_private.pri:
+../../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_tools_private.pri:
+../../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_uiplugin.pri:
+../../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_uitools.pri:
+../../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_uitools_private.pri:
+../../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_widgets.pri:
+../../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_widgets_private.pri:
+../../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_xml.pri:
+../../../Qt/6.4.1/macos/mkspecs/modules/qt_lib_xml_private.pri:
+../../../Qt/6.4.1/macos/mkspecs/features/qt_functions.prf:
+../../../Qt/6.4.1/macos/mkspecs/features/qt_config.prf:
+../../../Qt/6.4.1/macos/mkspecs/macx-clang/qmake.conf:
+../../../Qt/6.4.1/macos/mkspecs/features/spec_post.prf:
+.qmake.stash:
+../../../Qt/6.4.1/macos/mkspecs/features/exclusive_builds.prf:
+../../../Qt/6.4.1/macos/mkspecs/features/mac/sdk.prf:
+../../../Qt/6.4.1/macos/mkspecs/features/toolchain.prf:
+../../../Qt/6.4.1/macos/mkspecs/features/mac/toolchain.prf:
+../../../Qt/6.4.1/macos/mkspecs/features/default_pre.prf:
+../../../Qt/6.4.1/macos/mkspecs/features/mac/default_pre.prf:
+../../../Qt/6.4.1/macos/mkspecs/features/resolve_config.prf:
+../../../Qt/6.4.1/macos/mkspecs/features/default_post.prf:
+../../../Qt/6.4.1/macos/mkspecs/features/mac/default_post.prf:
+../../../Qt/6.4.1/macos/mkspecs/features/mac/objective_c.prf:
+../../../Qt/6.4.1/macos/mkspecs/features/qml_debug.prf:
+../../../Qt/6.4.1/macos/mkspecs/features/mac/mac.prf:
+../../../Qt/6.4.1/macos/mkspecs/features/warn_on.prf:
+../../../Qt/6.4.1/macos/mkspecs/features/qt.prf:
+../../../Qt/6.4.1/macos/mkspecs/features/resources_functions.prf:
+../../../Qt/6.4.1/macos/mkspecs/features/resources.prf:
+../../../Qt/6.4.1/macos/mkspecs/features/moc.prf:
+../../../Qt/6.4.1/macos/mkspecs/features/unix/opengl.prf:
+../../../Qt/6.4.1/macos/mkspecs/features/uic.prf:
+../../../Qt/6.4.1/macos/mkspecs/features/unix/thread.prf:
+../../../Qt/6.4.1/macos/mkspecs/features/qmake_use.prf:
+../../../Qt/6.4.1/macos/mkspecs/features/file_copies.prf:
+../../../Qt/6.4.1/macos/mkspecs/features/mac/rez.prf:
+../../../Qt/6.4.1/macos/mkspecs/features/mac/asset_catalogs.prf:
+../../../Qt/6.4.1/macos/mkspecs/features/testcase_targets.prf:
+../../../Qt/6.4.1/macos/mkspecs/features/exceptions.prf:
+../../../Qt/6.4.1/macos/mkspecs/features/yacc.prf:
+../../../Qt/6.4.1/macos/mkspecs/features/lex.prf:
 ../ChangeFontSize/ChangeFontSize.pro:
-../../Qt/6.4.1/macos/lib/QtWidgets.framework/Resources/QtWidgets.prl:
-../../Qt/6.4.1/macos/lib/QtGui.framework/Resources/QtGui.prl:
-../../Qt/6.4.1/macos/lib/QtCore.framework/Resources/QtCore.prl:
+../../../Qt/6.4.1/macos/lib/QtWidgets.framework/Resources/QtWidgets.prl:
+../../../Qt/6.4.1/macos/lib/QtGui.framework/Resources/QtGui.prl:
+../../../Qt/6.4.1/macos/lib/QtCore.framework/Resources/QtCore.prl:
 qmake: FORCE
 	@$(QMAKE) -o Makefile ../ChangeFontSize/ChangeFontSize.pro -spec macx-clang CONFIG+=debug CONFIG+=qml_debug
 
@@ -567,7 +570,7 @@ MyTool.app/Contents/Resources/empty.lproj:
 MyTool.app/Contents/Info.plist: 
 	@test -d MyTool.app/Contents || mkdir -p MyTool.app/Contents
 	@$(DEL_FILE) MyTool.app/Contents/Info.plist
-	@sed -e "s,@SHORT_VERSION@,1.0,g" -e "s,\$${QMAKE_SHORT_VERSION},1.0,g" -e "s,@FULL_VERSION@,1.0.0,g" -e "s,\$${QMAKE_FULL_VERSION},1.0.0,g" -e "s,@TYPEINFO@,????,g" -e "s,\$${QMAKE_PKGINFO_TYPEINFO},????,g" -e "s,@BUNDLEIDENTIFIER@,sodgso262-gmail.com.MyTool,g" -e "s,\$${PRODUCT_BUNDLE_IDENTIFIER},sodgso262-gmail.com.MyTool,g" -e "s,\$${MACOSX_DEPLOYMENT_TARGET},10.14,g" -e "s,\$${IPHONEOS_DEPLOYMENT_TARGET},,g" -e "s,\$${TVOS_DEPLOYMENT_TARGET},,g" -e "s,\$${WATCHOS_DEPLOYMENT_TARGET},,g" -e "s,\$${IOS_LAUNCH_SCREEN},LaunchScreen,g" -e "s,@ICON@,MacLogo.icns,g" -e "s,\$${ASSETCATALOG_COMPILER_APPICON_NAME},MacLogo.icns,g" -e "s,@EXECUTABLE@,MyTool,g" -e "s,@LIBRARY@,MyTool,g" -e "s,\$${EXECUTABLE_NAME},MyTool,g" -e "s,@TYPEINFO@,????,g" -e "s,\$${QMAKE_PKGINFO_TYPEINFO},????,g" ../../Qt/6.4.1/macos/mkspecs/macx-clang/Info.plist.app >MyTool.app/Contents/Info.plist
+	@sed -e "s,@SHORT_VERSION@,1.0,g" -e "s,\$${QMAKE_SHORT_VERSION},1.0,g" -e "s,@FULL_VERSION@,1.0.0,g" -e "s,\$${QMAKE_FULL_VERSION},1.0.0,g" -e "s,@TYPEINFO@,????,g" -e "s,\$${QMAKE_PKGINFO_TYPEINFO},????,g" -e "s,@BUNDLEIDENTIFIER@,sodgso262-gmail.com.MyTool,g" -e "s,\$${PRODUCT_BUNDLE_IDENTIFIER},sodgso262-gmail.com.MyTool,g" -e "s,\$${MACOSX_DEPLOYMENT_TARGET},10.14,g" -e "s,\$${IPHONEOS_DEPLOYMENT_TARGET},,g" -e "s,\$${TVOS_DEPLOYMENT_TARGET},,g" -e "s,\$${WATCHOS_DEPLOYMENT_TARGET},,g" -e "s,\$${IOS_LAUNCH_SCREEN},LaunchScreen,g" -e "s,@ICON@,MacLogo.icns,g" -e "s,\$${ASSETCATALOG_COMPILER_APPICON_NAME},MacLogo.icns,g" -e "s,@EXECUTABLE@,MyTool,g" -e "s,@LIBRARY@,MyTool,g" -e "s,\$${EXECUTABLE_NAME},MyTool,g" -e "s,@TYPEINFO@,????,g" -e "s,\$${QMAKE_PKGINFO_TYPEINFO},????,g" ../../../Qt/6.4.1/macos/mkspecs/macx-clang/Info.plist.app >MyTool.app/Contents/Info.plist
 MyTool.app/Contents/Resources/MacLogo.icns: ../ChangeFontSize/MacLogo.icns
 	@test -d MyTool.app/Contents/Resources/ || mkdir -p MyTool.app/Contents/Resources/
 	@$(DEL_FILE) MyTool.app/Contents/Resources/MacLogo.icns
@@ -597,6 +600,7 @@ clean: compiler_clean
 
 distclean: clean 
 	-$(DEL_FILE) -r MyTool.app
+	-$(DEL_FILE) .qmake.stash
 	-$(DEL_FILE) Makefile
 
 
@@ -619,25 +623,25 @@ compiler_moc_header_make_all: moc_mainwindow.cpp
 compiler_moc_header_clean:
 	-$(DEL_FILE) moc_mainwindow.cpp
 moc_mainwindow.cpp: ../ChangeFontSize/mainwindow.h \
-		../../Qt/6.4.1/macos/lib/QtWidgets.framework/Headers/QMainWindow \
-		../../Qt/6.4.1/macos/lib/QtWidgets.framework/Headers/qmainwindow.h \
-		../../Qt/6.4.1/macos/lib/QtWidgets.framework/Headers/QTextEdit \
-		../../Qt/6.4.1/macos/lib/QtWidgets.framework/Headers/qtextedit.h \
-		../../Qt/6.4.1/macos/lib/QtWidgets.framework/Headers/QSpinBox \
-		../../Qt/6.4.1/macos/lib/QtWidgets.framework/Headers/qspinbox.h \
-		../../Qt/6.4.1/macos/lib/QtWidgets.framework/Headers/QPushButton \
-		../../Qt/6.4.1/macos/lib/QtWidgets.framework/Headers/qpushbutton.h \
-		../../Qt/6.4.1/macos/lib/QtWidgets.framework/Headers/QMessageBox \
-		../../Qt/6.4.1/macos/lib/QtWidgets.framework/Headers/qmessagebox.h \
-		../../Qt/6.4.1/macos/lib/QtGui.framework/Headers/QClipboard \
-		../../Qt/6.4.1/macos/lib/QtGui.framework/Headers/qclipboard.h \
-		../../Qt/6.4.1/macos/lib/QtWidgets.framework/Headers/QApplication \
-		../../Qt/6.4.1/macos/lib/QtWidgets.framework/Headers/qapplication.h \
-		../../Qt/6.4.1/macos/lib/QtWidgets.framework/Headers/QVBoxLayout \
-		../../Qt/6.4.1/macos/lib/QtWidgets.framework/Headers/qboxlayout.h \
-		../../Qt/6.4.1/macos/lib/QtWidgets.framework/Headers/QHBoxLayout \
-		../../Qt/6.4.1/macos/libexec/moc
-	/Users/mindgood/Qt/6.4.1/macos/libexec/moc $(DEFINES) -D__APPLE__ -D__GNUC__=4 -D__APPLE_CC__ -D__cplusplus=199711L -D__APPLE_CC__=6000 -D__clang__ -D__clang_major__=14 -D__clang_minor__=0 -D__clang_patchlevel__=0 -D__GNUC__=4 -D__GNUC_MINOR__=2 -D__GNUC_PATCHLEVEL__=1 -I/Users/mindgood/Qt/6.4.1/macos/mkspecs/macx-clang -I/Users/mindgood/Documents/ChangeFontSize -I/Users/mindgood/Qt/6.4.1/macos/lib/QtWidgets.framework/Headers -I/Users/mindgood/Qt/6.4.1/macos/lib/QtGui.framework/Headers -I/Users/mindgood/Qt/6.4.1/macos/lib/QtCore.framework/Headers -I. -I/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk/usr/include/c++/v1 -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/14.0.0/include -I/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -F/Users/mindgood/Qt/6.4.1/macos/lib ../ChangeFontSize/mainwindow.h -o moc_mainwindow.cpp
+		../../../Qt/6.4.1/macos/lib/QtWidgets.framework/Headers/QMainWindow \
+		../../../Qt/6.4.1/macos/lib/QtWidgets.framework/Headers/qmainwindow.h \
+		../../../Qt/6.4.1/macos/lib/QtWidgets.framework/Headers/QTextEdit \
+		../../../Qt/6.4.1/macos/lib/QtWidgets.framework/Headers/qtextedit.h \
+		../../../Qt/6.4.1/macos/lib/QtWidgets.framework/Headers/QSpinBox \
+		../../../Qt/6.4.1/macos/lib/QtWidgets.framework/Headers/qspinbox.h \
+		../../../Qt/6.4.1/macos/lib/QtWidgets.framework/Headers/QPushButton \
+		../../../Qt/6.4.1/macos/lib/QtWidgets.framework/Headers/qpushbutton.h \
+		../../../Qt/6.4.1/macos/lib/QtWidgets.framework/Headers/QMessageBox \
+		../../../Qt/6.4.1/macos/lib/QtWidgets.framework/Headers/qmessagebox.h \
+		../../../Qt/6.4.1/macos/lib/QtGui.framework/Headers/QClipboard \
+		../../../Qt/6.4.1/macos/lib/QtGui.framework/Headers/qclipboard.h \
+		../../../Qt/6.4.1/macos/lib/QtWidgets.framework/Headers/QApplication \
+		../../../Qt/6.4.1/macos/lib/QtWidgets.framework/Headers/qapplication.h \
+		../../../Qt/6.4.1/macos/lib/QtWidgets.framework/Headers/QVBoxLayout \
+		../../../Qt/6.4.1/macos/lib/QtWidgets.framework/Headers/qboxlayout.h \
+		../../../Qt/6.4.1/macos/lib/QtWidgets.framework/Headers/QHBoxLayout \
+		../../../Qt/6.4.1/macos/libexec/moc
+	/Users/mindgood/Qt/6.4.1/macos/libexec/moc $(DEFINES) -D__APPLE__ -D__GNUC__=4 -D__APPLE_CC__ -D__cplusplus=199711L -D__APPLE_CC__=6000 -D__clang__ -D__clang_major__=14 -D__clang_minor__=0 -D__clang_patchlevel__=0 -D__GNUC__=4 -D__GNUC_MINOR__=2 -D__GNUC_PATCHLEVEL__=1 -I/Users/mindgood/Qt/6.4.1/macos/mkspecs/macx-clang -I/Users/mindgood/Documents/Auxiliary-tools-for-reading-foreign-languages/ChangeFontSize -I/Users/mindgood/Qt/6.4.1/macos/lib/QtWidgets.framework/Headers -I/Users/mindgood/Qt/6.4.1/macos/lib/QtGui.framework/Headers -I/Users/mindgood/Qt/6.4.1/macos/lib/QtCore.framework/Headers -I. -I/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk/usr/include/c++/v1 -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/14.0.0/include -I/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -F/Users/mindgood/Qt/6.4.1/macos/lib ../ChangeFontSize/mainwindow.h -o moc_mainwindow.cpp
 
 compiler_moc_objc_header_make_all:
 compiler_moc_objc_header_clean:
@@ -647,7 +651,7 @@ compiler_uic_make_all: ui_mainwindow.h
 compiler_uic_clean:
 	-$(DEL_FILE) ui_mainwindow.h
 ui_mainwindow.h: ../ChangeFontSize/mainwindow.ui \
-		../../Qt/6.4.1/macos/libexec/uic
+		../../../Qt/6.4.1/macos/libexec/uic
 	/Users/mindgood/Qt/6.4.1/macos/libexec/uic ../ChangeFontSize/mainwindow.ui -o ui_mainwindow.h
 
 compiler_rez_source_make_all:
@@ -663,49 +667,49 @@ compiler_clean: compiler_moc_header_clean compiler_uic_clean
 ####### Compile
 
 main.o: ../ChangeFontSize/main.cpp ../ChangeFontSize/mainwindow.h \
-		../../Qt/6.4.1/macos/lib/QtWidgets.framework/Headers/QMainWindow \
-		../../Qt/6.4.1/macos/lib/QtWidgets.framework/Headers/qmainwindow.h \
-		../../Qt/6.4.1/macos/lib/QtWidgets.framework/Headers/QTextEdit \
-		../../Qt/6.4.1/macos/lib/QtWidgets.framework/Headers/qtextedit.h \
-		../../Qt/6.4.1/macos/lib/QtWidgets.framework/Headers/QSpinBox \
-		../../Qt/6.4.1/macos/lib/QtWidgets.framework/Headers/qspinbox.h \
-		../../Qt/6.4.1/macos/lib/QtWidgets.framework/Headers/QPushButton \
-		../../Qt/6.4.1/macos/lib/QtWidgets.framework/Headers/qpushbutton.h \
-		../../Qt/6.4.1/macos/lib/QtWidgets.framework/Headers/QMessageBox \
-		../../Qt/6.4.1/macos/lib/QtWidgets.framework/Headers/qmessagebox.h \
-		../../Qt/6.4.1/macos/lib/QtGui.framework/Headers/QClipboard \
-		../../Qt/6.4.1/macos/lib/QtGui.framework/Headers/qclipboard.h \
-		../../Qt/6.4.1/macos/lib/QtWidgets.framework/Headers/QApplication \
-		../../Qt/6.4.1/macos/lib/QtWidgets.framework/Headers/qapplication.h \
-		../../Qt/6.4.1/macos/lib/QtWidgets.framework/Headers/QVBoxLayout \
-		../../Qt/6.4.1/macos/lib/QtWidgets.framework/Headers/qboxlayout.h \
-		../../Qt/6.4.1/macos/lib/QtWidgets.framework/Headers/QHBoxLayout
+		../../../Qt/6.4.1/macos/lib/QtWidgets.framework/Headers/QMainWindow \
+		../../../Qt/6.4.1/macos/lib/QtWidgets.framework/Headers/qmainwindow.h \
+		../../../Qt/6.4.1/macos/lib/QtWidgets.framework/Headers/QTextEdit \
+		../../../Qt/6.4.1/macos/lib/QtWidgets.framework/Headers/qtextedit.h \
+		../../../Qt/6.4.1/macos/lib/QtWidgets.framework/Headers/QSpinBox \
+		../../../Qt/6.4.1/macos/lib/QtWidgets.framework/Headers/qspinbox.h \
+		../../../Qt/6.4.1/macos/lib/QtWidgets.framework/Headers/QPushButton \
+		../../../Qt/6.4.1/macos/lib/QtWidgets.framework/Headers/qpushbutton.h \
+		../../../Qt/6.4.1/macos/lib/QtWidgets.framework/Headers/QMessageBox \
+		../../../Qt/6.4.1/macos/lib/QtWidgets.framework/Headers/qmessagebox.h \
+		../../../Qt/6.4.1/macos/lib/QtGui.framework/Headers/QClipboard \
+		../../../Qt/6.4.1/macos/lib/QtGui.framework/Headers/qclipboard.h \
+		../../../Qt/6.4.1/macos/lib/QtWidgets.framework/Headers/QApplication \
+		../../../Qt/6.4.1/macos/lib/QtWidgets.framework/Headers/qapplication.h \
+		../../../Qt/6.4.1/macos/lib/QtWidgets.framework/Headers/QVBoxLayout \
+		../../../Qt/6.4.1/macos/lib/QtWidgets.framework/Headers/qboxlayout.h \
+		../../../Qt/6.4.1/macos/lib/QtWidgets.framework/Headers/QHBoxLayout
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o main.o ../ChangeFontSize/main.cpp
 
 mainwindow.o: ../ChangeFontSize/mainwindow.cpp ../ChangeFontSize/mainwindow.h \
-		../../Qt/6.4.1/macos/lib/QtWidgets.framework/Headers/QMainWindow \
-		../../Qt/6.4.1/macos/lib/QtWidgets.framework/Headers/qmainwindow.h \
-		../../Qt/6.4.1/macos/lib/QtWidgets.framework/Headers/QTextEdit \
-		../../Qt/6.4.1/macos/lib/QtWidgets.framework/Headers/qtextedit.h \
-		../../Qt/6.4.1/macos/lib/QtWidgets.framework/Headers/QSpinBox \
-		../../Qt/6.4.1/macos/lib/QtWidgets.framework/Headers/qspinbox.h \
-		../../Qt/6.4.1/macos/lib/QtWidgets.framework/Headers/QPushButton \
-		../../Qt/6.4.1/macos/lib/QtWidgets.framework/Headers/qpushbutton.h \
-		../../Qt/6.4.1/macos/lib/QtWidgets.framework/Headers/QMessageBox \
-		../../Qt/6.4.1/macos/lib/QtWidgets.framework/Headers/qmessagebox.h \
-		../../Qt/6.4.1/macos/lib/QtGui.framework/Headers/QClipboard \
-		../../Qt/6.4.1/macos/lib/QtGui.framework/Headers/qclipboard.h \
-		../../Qt/6.4.1/macos/lib/QtWidgets.framework/Headers/QApplication \
-		../../Qt/6.4.1/macos/lib/QtWidgets.framework/Headers/qapplication.h \
-		../../Qt/6.4.1/macos/lib/QtWidgets.framework/Headers/QVBoxLayout \
-		../../Qt/6.4.1/macos/lib/QtWidgets.framework/Headers/qboxlayout.h \
-		../../Qt/6.4.1/macos/lib/QtWidgets.framework/Headers/QHBoxLayout \
-		../../Qt/6.4.1/macos/lib/QtGui.framework/Headers/QFont \
-		../../Qt/6.4.1/macos/lib/QtGui.framework/Headers/qfont.h \
-		../../Qt/6.4.1/macos/lib/QtWidgets.framework/Headers/QStatusBar \
-		../../Qt/6.4.1/macos/lib/QtWidgets.framework/Headers/qstatusbar.h \
-		../../Qt/6.4.1/macos/lib/QtCore.framework/Headers/QtDebug \
-		../../Qt/6.4.1/macos/lib/QtCore.framework/Headers/qdebug.h
+		../../../Qt/6.4.1/macos/lib/QtWidgets.framework/Headers/QMainWindow \
+		../../../Qt/6.4.1/macos/lib/QtWidgets.framework/Headers/qmainwindow.h \
+		../../../Qt/6.4.1/macos/lib/QtWidgets.framework/Headers/QTextEdit \
+		../../../Qt/6.4.1/macos/lib/QtWidgets.framework/Headers/qtextedit.h \
+		../../../Qt/6.4.1/macos/lib/QtWidgets.framework/Headers/QSpinBox \
+		../../../Qt/6.4.1/macos/lib/QtWidgets.framework/Headers/qspinbox.h \
+		../../../Qt/6.4.1/macos/lib/QtWidgets.framework/Headers/QPushButton \
+		../../../Qt/6.4.1/macos/lib/QtWidgets.framework/Headers/qpushbutton.h \
+		../../../Qt/6.4.1/macos/lib/QtWidgets.framework/Headers/QMessageBox \
+		../../../Qt/6.4.1/macos/lib/QtWidgets.framework/Headers/qmessagebox.h \
+		../../../Qt/6.4.1/macos/lib/QtGui.framework/Headers/QClipboard \
+		../../../Qt/6.4.1/macos/lib/QtGui.framework/Headers/qclipboard.h \
+		../../../Qt/6.4.1/macos/lib/QtWidgets.framework/Headers/QApplication \
+		../../../Qt/6.4.1/macos/lib/QtWidgets.framework/Headers/qapplication.h \
+		../../../Qt/6.4.1/macos/lib/QtWidgets.framework/Headers/QVBoxLayout \
+		../../../Qt/6.4.1/macos/lib/QtWidgets.framework/Headers/qboxlayout.h \
+		../../../Qt/6.4.1/macos/lib/QtWidgets.framework/Headers/QHBoxLayout \
+		../../../Qt/6.4.1/macos/lib/QtGui.framework/Headers/QFont \
+		../../../Qt/6.4.1/macos/lib/QtGui.framework/Headers/qfont.h \
+		../../../Qt/6.4.1/macos/lib/QtWidgets.framework/Headers/QStatusBar \
+		../../../Qt/6.4.1/macos/lib/QtWidgets.framework/Headers/qstatusbar.h \
+		../../../Qt/6.4.1/macos/lib/QtCore.framework/Headers/QtDebug \
+		../../../Qt/6.4.1/macos/lib/QtCore.framework/Headers/qdebug.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o mainwindow.o ../ChangeFontSize/mainwindow.cpp
 
 moc_mainwindow.o: moc_mainwindow.cpp 
