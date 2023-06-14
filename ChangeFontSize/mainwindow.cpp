@@ -12,6 +12,12 @@ MainWindow::MainWindow(QWidget *parent)
      move(0,80);
      textEdit = new QTextEdit(this);
 
+     //QTextEdit *textEdit = new QTextEdit(this);
+     QPalette palette;
+     palette.setColor(QPalette::Base, Qt::black);
+     palette.setColor(QPalette::Text, Qt::white);
+     textEdit->setPalette(palette);
+
      // 设置字体
      QFont font = textEdit->font();
      font.setPointSize(CurrentValue);
