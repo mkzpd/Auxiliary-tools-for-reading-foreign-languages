@@ -65,6 +65,7 @@ void MainWindow::onButtonBClicked()
     QClipboard *clipboard = QApplication::clipboard();   //获取系统剪贴板指针
     QString originalText = clipboard->text();            //获取剪贴板上文本信息
 
+    QFont font = textEdit->font();
     //QString text = textEdit->toPlainText();   //调试用
     //qDebug() << "text is " << text;          //调试用
 
@@ -83,6 +84,12 @@ void MainWindow::onButtonBClicked()
 
         // 粘贴到 QTextEdit 控件中
         textEdit->paste();
+
+        textEdit->selectAll();
+        font.setPointSize(MainWindow::CurrentValue);
+        textEdit->setFont(font);
+        textEdit->selectAll();
+        textEdit->undo();
     }else
     {
         QMessageBox msgBox;
@@ -97,6 +104,11 @@ void  MainWindow::onFontSizeSpinBoxValueChanged(int CurrentValue)
 {
      // 根据设置的值调节字号
      QFont font = textEdit->font();
+     textEdit->selectAll();
      font.setPointSize(CurrentValue);
      textEdit->setFont(font);
+     MainWindow::CurrentValue = CurrentValue;
+     textEdit->selectAll();
+     textEdit->undo();
+     textEdit->redo();
 }
