@@ -66,6 +66,7 @@ void MainWindow::onButtonBClicked()
     QString originalText = clipboard->text();            //获取剪贴板上文本信息
 
     QFont font = textEdit->font();
+
     //QString text = textEdit->toPlainText();   //调试用
     //qDebug() << "text is " << text;          //调试用
 
@@ -73,8 +74,7 @@ void MainWindow::onButtonBClicked()
         // 清除当前 QTextEdit 中的文本
         textEdit->clear();
 
-        // 调用 QTextEdit 的粘贴功能
-        textEdit->paste();
+        textEdit->setText(originalText);
 
         // 全选刚粘贴的内容
         textEdit->selectAll();
@@ -112,3 +112,4 @@ void  MainWindow::onFontSizeSpinBoxValueChanged(int CurrentValue)
      textEdit->undo();
      textEdit->redo();
 }
+
