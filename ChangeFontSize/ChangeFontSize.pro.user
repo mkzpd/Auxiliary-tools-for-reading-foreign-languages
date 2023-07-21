@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE QtCreatorProject>
-<!-- Written by QtCreator 9.0.2, 2023-07-04T07:20:07. -->
+<!-- Written by QtCreator 9.0.2, 2023-07-21T12:17:38. -->
 <qtcreator>
  <data>
   <variable>EnvironmentId</variable>
@@ -236,9 +236,8 @@
     <valuelist type="QVariantList" key="CustomOutputParsers"/>
     <value type="int" key="PE.EnvironmentAspect.Base">2</value>
     <valuelist type="QVariantList" key="PE.EnvironmentAspect.Changes"/>
-    <value type="QString" key="ProjectExplorer.ProjectConfiguration.DisplayName">ChangeFontSize2</value>
-    <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">Qt4ProjectManager.Qt4RunConfiguration:C:/my-win10-document/code/testQ/Auxiliary-tools-for-reading-foreign-languages/ChangeFontSize/ChangeFontSize.pro</value>
-    <value type="QString" key="ProjectExplorer.RunConfiguration.BuildKey">C:/my-win10-document/code/testQ/Auxiliary-tools-for-reading-foreign-languages/ChangeFontSize/ChangeFontSize.pro</value>
+    <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">Qt4ProjectManager.Qt4RunConfiguration:C:/my-win10-document/code/Auxiliary-tools-for-reading-foreign-languages/ChangeFontSize/ChangeFontSize.pro</value>
+    <value type="QString" key="ProjectExplorer.RunConfiguration.BuildKey">C:/my-win10-document/code/Auxiliary-tools-for-reading-foreign-languages/ChangeFontSize/ChangeFontSize.pro</value>
     <value type="bool" key="RunConfiguration.UseCppDebugger">false</value>
     <value type="bool" key="RunConfiguration.UseCppDebuggerAuto">true</value>
     <value type="bool" key="RunConfiguration.UseLibrarySearchPath">true</value>

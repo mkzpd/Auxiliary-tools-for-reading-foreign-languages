@@ -626,7 +626,9 @@ debug\main.obj: ..\ChangeFontSize\main.cpp ..\ChangeFontSize\mainwindow.h \
 		..\..\..\software---install\QT--install\6.5.1\msvc2019_64\include\QtWidgets\qlayout.h \
 		..\..\..\software---install\QT--install\6.5.1\msvc2019_64\include\QtWidgets\qlayoutitem.h \
 		..\..\..\software---install\QT--install\6.5.1\msvc2019_64\include\QtWidgets\qgridlayout.h \
-		..\..\..\software---install\QT--install\6.5.1\msvc2019_64\include\QtWidgets\QHBoxLayout
+		..\..\..\software---install\QT--install\6.5.1\msvc2019_64\include\QtWidgets\QHBoxLayout \
+		..\..\..\software---install\QT--install\6.5.1\msvc2019_64\include\QtWidgets\QStyleFactory \
+		..\..\..\software---install\QT--install\6.5.1\msvc2019_64\include\QtWidgets\qstylefactory.h
 
 debug\mainwindow.obj: ..\ChangeFontSize\mainwindow.cpp ..\ChangeFontSize\mainwindow.h \
 		..\..\..\software---install\QT--install\6.5.1\msvc2019_64\include\QtWidgets\QMainWindow \

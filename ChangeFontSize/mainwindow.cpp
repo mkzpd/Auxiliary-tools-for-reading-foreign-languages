@@ -6,6 +6,7 @@
 #include <QVBoxLayout>
 #include <QHBoxLayout>
 
+
 MainWindow::MainWindow(QWidget *parent)
      : QMainWindow(parent)
 {
@@ -31,6 +32,8 @@ MainWindow::MainWindow(QWidget *parent)
      fontSizeSpinBox->setValue(CurrentValue);
      fontSizeSpinBox->setFixedWidth(70);
 
+
+
      buttonB.setText("粘贴并整理");
 
      // 将spinbox和button放到水平布局中
@@ -54,6 +57,7 @@ MainWindow::MainWindow(QWidget *parent)
 
      // 将spinbox放到左上角
      vLayout->setAlignment(Qt::AlignLeft);
+
 }
 
 MainWindow::~MainWindow()
