@@ -1,6 +1,11 @@
 # Auxiliary-tools-for-reading-foreign-languages
 A auxiliary tools that for reading foreign languages electronic book at computer  can temp save foreign languages translate.
 
+# 为什么写这个应用程序或者说这个程序与其他工具相比有什么优点
+
+* 自己定制的这个程序可以有默认的字体大小，大小比较合适，不至于字体太小，另外字体可以方便地调节大小。
+* 文本框的颜色设置为黑色，这样有利于保护眼睛。
+* 当第一次把文本粘贴到文本框后，以后每次粘贴时只需要点击一下 `粘贴并整理` 按钮即可，不需要每次把之前的内容全部选中再粘贴，程序会自动处理这个过程，大大减少了需要重复执行的步骤。
 
 # 应用程序介绍
 
